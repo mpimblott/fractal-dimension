@@ -1,5 +1,4 @@
-import data
-import config as cfg
+from utilities import data, config as cfg
 from pathlib import Path
 
 def main():
