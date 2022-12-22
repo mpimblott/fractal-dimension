@@ -1,3 +1,4 @@
 images
 dist
 __pycache__
+.vscode
