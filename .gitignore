@@ -2,4 +2,4 @@ images
 dist
 __pycache__
 .vscode
-.png
+*.png
