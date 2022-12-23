@@ -1,8 +1,20 @@
-from utilities import data, config as cfg
+import logging
+from utilities import arg_parsing, data_utils, config as cfg
 from pathlib import Path
 
+from scripts.bw_box_counting import black_white_box_count
+
 def main():
-    print(data.get_np_from_path(Path(cfg.image_path)))
+    logging.basicConfig(
+        level=logging.INFO
+    )
+    parser = arg_parsing.get_parser()
+    args = parser.parse_args()
+    method = args.method
+    data_path = args.filepath
+    print(data_path)
+    data = data_utils.get_np_from_path(data_path)
+    black_white_box_count(data)
 
 if __name__ == "__main__":
     main()
