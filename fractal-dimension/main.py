@@ -1,6 +1,7 @@
 import logging
 from utilities import arg_parsing, data_utils, config as cfg
 from pathlib import Path
+import numpy as np
 
 from scripts.bw_box_counting import black_white_box_count
 
